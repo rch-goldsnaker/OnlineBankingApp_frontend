@@ -4,8 +4,6 @@ import card from '../../assets/card1.png'
 
 export function AccountCard({ account, showLinkTransactions }) {
 
-  console.log('account', account)
-
   const transactionLink = `/account/${account._id}/transactions`;
 
   return (
