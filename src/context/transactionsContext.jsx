@@ -31,16 +31,11 @@ export function TransactionProvider({ children }) {
   const createTransaction = async (transaction) => {
     try {
       const res = await createTransactionsRequest(transaction);
-      console.log('res',res)
       if(res.data.success){
-        console.log('exitosa')
         setSuccedTransfer(true)
       }
     } catch (error) {
-      console.log('error',error);
-      console.log('test')
       setErrors(error.response.data.message);
-      console.log('errors', errors)
     }
   };
 
