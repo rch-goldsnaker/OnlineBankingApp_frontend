@@ -10,23 +10,21 @@ import { SideNavBar } from '../components/SideNavBar'
 
 
 export function TransactionAccountPage() {
-  const { account, getAccount, getAccountByType } = useAccounts();
+  const { account } = useAccounts();
   const { transaction, getTransactionsByAccount } = useTransactions();
   const params = useParams();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadAccount = async () => {
-      if (params.account) {
-        const { accountId } = await getAccountByType(params.account);
-        await getAccount(accountId);
-        await getTransactionsByAccount(accountId)
+      if (params.accountId) {
+        await getTransactionsByAccount(params.accountId)
       }
       setLoading(false);
     };
 
     loadAccount();
-  }, [params.account]);
+  }, [params.accountId]);
 
   return (
     <>

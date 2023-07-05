@@ -28,7 +28,7 @@ function App() {
                   <Route path="/dashboard" element={<DashboardPage />} />
                   <Route path="/accounts" element={<AccountsPage />} />
                   <Route path="/transaction" element={<TransactionFormPage />} />
-                  <Route path="/:account/transactions" element={<TransactionAccountPage />} />
+                  <Route path="/account/:accountId/transactions" element={<TransactionAccountPage />} />
                   <Route path="/profile" element={<ProfilePage />} />
                 </Route>
               </Routes>

@@ -5,7 +5,7 @@ import card from '../../assets/card1.png'
 export function AccountCard({ account, showLinkTransactions }) {
 
 
-  const transactionLink = `/${account.type}/transactions`;
+  const transactionLink = `/account/${account._id}/transactions`;
 
   return (
     <div className="flex items-center justify-center rounded">

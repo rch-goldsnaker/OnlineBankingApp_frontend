@@ -7,6 +7,7 @@ import { SideNavBar } from '../components/SideNavBar'
 import { Footer } from '../components/footer/Footer'
 import { csfrFormRequest } from '../api/csfr'
 import { useNavigate } from "react-router-dom";
+import { useAuth } from '../context/authContext'
 
 // import { zodResolver } from "@hookform/resolvers/zod";
 // import { transferSchema } from '../schemas/transfer'
@@ -15,6 +16,9 @@ export function TransactionFormPage() {
   const { createTransaction, succedTransfer, setSuccedTransfer, errors: transactionErrors } = useTransactions();
   const { getAccountByNumberAccount, errors: accountErrors } = useAccounts();
   const [csrfToken, setCsrfToken] = useState('');
+
+  const { user } = useAuth();
+
   const {
     register,
     handleSubmit,
@@ -24,7 +28,6 @@ export function TransactionFormPage() {
 
   const onSubmit = async (data) => {
     try {
-      console.log('data',data)
       const resFrom = await getAccountByNumberAccount(data.numberAccountFrom)
       const resTo = await getAccountByNumberAccount(data.numberAccountTo)
       const amount = parseFloat(data.amount);
@@ -33,6 +36,7 @@ export function TransactionFormPage() {
         accountFromId: resFrom.accountId,
         accountToId: resTo.accountId,
         amount: amount,
+        userFrom: user
       });
     } catch (error) {
       console.log(error);
