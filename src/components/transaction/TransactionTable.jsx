@@ -2,8 +2,6 @@ import {formatFriendlyDate} from '../../utils/formatDate'
 
 export function TransactionTable({ transaction }) {
 
-  console.log('transaction',transaction)
-
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-full">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
