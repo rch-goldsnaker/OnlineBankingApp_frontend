@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAccounts } from '../context/accountsContext'
 import { AccountCard } from "../components/accounts/AccountCard";
-import { Footer } from '../components/footer/footer'
+import { Footer } from '../components/footer/Footer'
 import { AccountTable } from '../components/accounts/AccountTable'
 import { SideNavBar } from '../components/SideNavBar'
 

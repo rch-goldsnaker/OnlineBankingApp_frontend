@@ -1,7 +1,7 @@
 import { useAuth } from '../context/authContext'
 import userLogo from '../assets/user.png'
 import { SideNavBar } from '../components/SideNavBar'
-import { Footer } from '../components/footer/footer'
+import { Footer } from '../components/footer/Footer'
 
 export function ProfilePage() {
 

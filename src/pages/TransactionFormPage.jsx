@@ -4,7 +4,7 @@ import { useTransactions } from "../context/transactionsContext";
 import { useAccounts } from '../context/accountsContext'
 import { useForm } from "react-hook-form";
 import { SideNavBar } from '../components/SideNavBar'
-import { Footer } from '../components/footer/footer'
+import { Footer } from '../components/footer/Footer'
 import { csfrFormRequest } from '../api/csfr'
 import { useNavigate } from "react-router-dom";
 

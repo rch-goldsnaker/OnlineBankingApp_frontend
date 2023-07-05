@@ -3,7 +3,7 @@ import { useAccounts } from '../context/accountsContext'
 import { useTransactions } from '../context/transactionsContext'
 import { AccountCard } from "../components/accounts/AccountCard";
 import { TransactionTable } from '../components/transaction/TransactionTable'
-import { Footer } from '../components/footer/footer'
+import { Footer } from '../components/footer/Footer'
 import { SideNavBar } from '../components/SideNavBar'
 
 export function DashboardPage() {
